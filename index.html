@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexicar | Car Rental</title>
+    <link rel="stylesheet" href="./styles/utils/reset.css" />
+    <link rel="stylesheet" href="./styles/utils/variables.css" />
+    <link rel="stylesheet" href="./styles/utils/layout.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/components//header.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a href="/" class="logo">
+        <img src="./assets/icons/logo.svg" alt="Flexicar logo">
+      </a>
+      <div class="burger-button-container">
+        <a href="tel:+1234567890" class="phone for-tablet">
+          <img src="./assets/icons/phone.svg" alt="phone icon">
+          +123 456 7890
+        </a>
+        <button id="burger-button" class="burger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div id="menu-container" class="container">
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#">Book</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Rental Policies</a></li>
+            <li><a href="#">Blog & Guides</a></li>
+          </ul>
+        </nav>
+    
+        <div class="header-actions">
+          <div class="language-picker">
+            <button id="language-toggle" class="language-button">
+              <div id="language">
+                EN
+              </div>
+              <span class="chevron">
+                <img src="./assets/icons/chevron.svg" alt="chevron icon">
+              </span>
+            </button>
+            <ul class="language-dropdown">
+              <li data-lang="UA" class="language-option ">
+                <span>
+                  <img src="./assets/icons/flags-ua.svg" alt="ukrainian flag icon">
+                  Ukrainian
+                </span>
+                <span class="checkmark">
+                  <img src="./assets/icons/check.svg" alt="check icon">
+                </span>
+              </li>
+              <li data-lang="EN" class="language-option selected">
+                <span>
+                  <img src="./assets/icons/flags-eng.svg" alt="English flag icon">
+                  English
+                </span>
+                <span class="checkmark">
+                  <img src="./assets/icons/check.svg" alt="check icon">
+                </span>
+              </li>
+              <li data-lang="HR" class="language-option ">
+                <span>
+                  <img src="./assets/icons/flags-cr.svg" alt="Croatia flag icon">
+                  Croatia
+                </span>
+                <span class="checkmark">
+                  <img src="./assets/icons/check.svg" alt="check icon">
+                </span>
+              </li>
+            </ul>
+
+          </div>
+          <a href="tel:+1234567890" class="phone">
+            <img src="./assets/icons/phone.svg" alt="phone icon">
+            +123 456 7890
+          </a>
+          <button class="btn-signin">
+            <?xml version="1.0" ?><svg fill="none" height="24" stroke-width="1.5" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M19 12H12M12 12L15 15M12 12L15 9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 6V5C19 3.89543 18.1046 3 17 3H7C5.89543 3 5 3.89543 5 5V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Sign In
+          </button>
+        </div>
+      </div>
+      
+    </header>
+    <main>
+      <!-- Dynamic content area: car info, extras, insurance, form -->
+    </main>
+
+    <footer>
+      <!-- Footer content with contact, newsletter, links -->
+    </footer>
+
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>

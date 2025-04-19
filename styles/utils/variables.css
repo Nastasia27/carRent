@@ -1,0 +1,18 @@
+:root {
+  /* colors */
+  --color-white: #FEFEFF;
+  --color-primary: #b68867;
+  --color-bg: #121214;
+  --color-dark-grey: #1E1E20;
+  --color-grey: #39393B;
+  --color-light-grey: #919192;
+  --color-primary-20: #B68867;
+  --color-primary-light: #ffebe1;
+  --color-white-20:#FFFFFF;
+
+  /* fonts */
+  --font-main: 'Inter', sans-serif;
+
+
+  --transition: all 0.3s ease-in-out;
+}
