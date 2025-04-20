@@ -1,0 +1,71 @@
+.input-wrapper {
+    position: relative;
+    
+}
+input {
+    background-color: transparent;
+    padding: 12px 14px;
+    border: 1px solid #4F4F51;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
+    max-width: 320px;
+    min-width: 320px;
+    min-height: 48px;
+    color: rgba(233, 233, 233, 0.9);
+    position: relative;
+    flex: 1;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+input:-webkit-autofill {
+    background-color: transparent;
+}
+
+input::placeholder {
+    color: rgba(145, 145, 146, 0.5);
+}
+
+input:focus-within {
+    border: 1px solid rgba(189, 189, 190, 0.7);
+}
+
+/* error */
+input.error {
+    border: 1px solid rgba(253, 162, 155, 1);
+}
+
+input::placeholder.error {
+    color: rgba(145, 145, 146, 0.5);
+}
+
+input:focus-within.error {
+    border: 1px solid rgba(126, 54, 48, 1);
+}
+
+input:focus-within.error .error-icon{
+    color: rgba(144, 43, 36, 1);
+    display: block;
+}
+
+.error-icon {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    color: rgba(240, 68, 56, 1);
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .input-wrapper {
+        position: relative;
+        width: 100%;
+    }
+    input {
+        min-width: 0;
+        width: 100%;
+        flex: 1;
+    }
+ }

@@ -1,3 +1,4 @@
+
 /* Basic reset */
 * {
   margin: 0;
@@ -8,4 +9,16 @@ body {
   font-family: var(--font-main);
   background-color: var(--color-bg);
   color: var(--color-light);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+a {
+  all: unset;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
 }

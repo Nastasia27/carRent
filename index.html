@@ -8,8 +8,12 @@
     <link rel="stylesheet" href="./styles/utils/variables.css" />
     <link rel="stylesheet" href="./styles/utils/layout.css" />
     <link rel="stylesheet" href="./styles/main.css" />
-    <link rel="stylesheet" href="./styles/components//header.css" />
+    <link rel="stylesheet" href="./styles/components/header.css" />
+    <link rel="stylesheet" href="./styles/components/button.css" />
+    <link rel="stylesheet" href="./styles/components/input.css" />
+    <link rel="stylesheet" href="./styles/components/footer.css" />
   </head>
+  
   <body>
     <header class="site-header">
       <a href="/" class="logo">
@@ -26,6 +30,16 @@
       </div>
       <div id="menu-container" class="container">
         <nav class="main-nav">
+          <div class="mobile-user-menu hidden" id="mobile-user-menu">
+            <div class="user-email">
+              <div class="avatar-pic">OR</div>
+              <p class="">name@gmail.com</p>
+            </div>
+            <ul class="mobile-menu-items">
+              <li><a href="#">Account</a></li>
+              <li><a href="#">My Booking</a></li>
+            </ul>
+          </div>
           <ul>
             <li><a href="#">Book</a></li>
             <li><a href="#">Help</a></li>
@@ -37,16 +51,16 @@
     
         <div class="header-actions">
           <div class="language-picker">
-            <button id="language-toggle" class="language-button">
+            <button id="language-toggle" class="ghost-button">
               <div id="language">
                 EN
               </div>
               <span class="chevron">
-                <img src="./assets/icons/chevron.svg" alt="chevron icon">
+                <?xml version="1.0" ?><svg class="feather feather-chevron-down" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><polyline points="6 9 12 15 18 9"/></svg>
               </span>
             </button>
-            <ul class="language-dropdown">
-              <li data-lang="UA" class="language-option ">
+            <ul class="dropdown" id="language-dropdown">
+              <li data-lang="UA" class="dropdown-option" id="language-option">
                 <span>
                   <img src="./assets/icons/flags-ua.svg" alt="ukrainian flag icon">
                   Ukrainian
@@ -55,7 +69,7 @@
                   <img src="./assets/icons/check.svg" alt="check icon">
                 </span>
               </li>
-              <li data-lang="EN" class="language-option selected">
+              <li data-lang="EN" class="dropdown-option selected">
                 <span>
                   <img src="./assets/icons/flags-eng.svg" alt="English flag icon">
                   English
@@ -64,7 +78,7 @@
                   <img src="./assets/icons/check.svg" alt="check icon">
                 </span>
               </li>
-              <li data-lang="HR" class="language-option ">
+              <li data-lang="HR" class="dropdown-option ">
                 <span>
                   <img src="./assets/icons/flags-cr.svg" alt="Croatia flag icon">
                   Croatia
@@ -80,20 +94,89 @@
             <img src="./assets/icons/phone.svg" alt="phone icon">
             +123 456 7890
           </a>
-          <button class="btn-signin">
+          <button class="btn-signin" id="btn-signin">
             <?xml version="1.0" ?><svg fill="none" height="24" stroke-width="1.5" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M19 12H12M12 12L15 15M12 12L15 9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/><path d="M19 6V5C19 3.89543 18.1046 3 17 3H7C5.89543 3 5 3.89543 5 5V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></svg>
             Sign In
           </button>
+
+          <!-- user block, after login (hidden by default)-->
+          <div class="user-info hidden" id="user-info">
+            <button class="user-email ghost-button" id="user-email-btn">
+              <div class="avatar-pic">OR</div>
+              name@gmail.com
+              <span class="chevron">
+                <?xml version="1.0" ?><svg class="feather feather-chevron-down" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><polyline points="6 9 12 15 18 9"/></svg>
+              </span>
+            </button>
+            
+            <!-- dropdown -->
+            <ul class="dropdown" id="user-dropdown">
+              <li  class="dropdown-option" >
+                <span>
+                  <img src="./assets/icons/user-edit.svg" alt="ukrainian flag icon">
+                  Account
+                </span>
+              </li>
+              <li  class="dropdown-option ">
+                <span>
+                  <img src="./assets/icons/car-01.svg" alt="English flag icon">
+                  My Booking
+                </span>
+              </li>
+              <li  class="dropdown-option ">
+                <span>
+                  <img src="./assets/icons/headphones-01.svg" alt="English flag icon">
+                  Help
+                </span>
+              </li>
+            </ul>
+            
+          </div>
         </div>
       </div>
-      
     </header>
-    <main>
+
+    <main class="main">
       <!-- Dynamic content area: car info, extras, insurance, form -->
     </main>
 
-    <footer>
-      <!-- Footer content with contact, newsletter, links -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-block">
+          <a href="/" class="logo">
+            <img src="./assets/icons/logo.svg" alt="Flexicar logo">
+          </a>
+          <p class="">Your Trusted Ride Awaits.</p>
+        </div>
+        <div class="footer-block">
+          <form class="footer-subscribe" id="subscribe-form">
+            <label for="email">Stay up to date</label>
+            <div class="input-block">
+              <div class="input-wrapper">
+                <input type="email" id="email" name="email" placeholder="Enter your email" required />
+                <div class="error-icon" id="error-icon">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.00065 5.3335V8.00016M8.00065 10.6668H8.00732M14.6673 8.00016C14.6673 11.6821 11.6826 14.6668 8.00065 14.6668C4.31875 14.6668 1.33398 11.6821 1.33398 8.00016C1.33398 4.31826 4.31875 1.3335 8.00065 1.3335C11.6826 1.3335 14.6673 4.31826 14.6673 8.00016Z" stroke="#F04438" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg> 
+                </div>
+              </div>               
+              <button type="submit" class="btn-secondary" id="subscribe-button">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="footer-content footer-bottom">
+        <div class="footer-block">
+          <p>© 2077 Untitled UI. All rights reserved.</p>
+        </div>
+        <div class="footer-block">
+          <nav class="footer-links">
+            <a href="#">Terms</a>
+            <a href="#">Privacy</a>
+            <a href="#">Cookies</a>
+          </nav>
+        </div>
+      </div>
     </footer>
 
     <script src="./scripts/main.js"></script>
