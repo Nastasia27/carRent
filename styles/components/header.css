@@ -14,6 +14,7 @@
     justify-content: space-between;
     gap: 42px;
     width: 100%;
+    z-index: 3;
 }
   
   .site-header .container {
@@ -261,7 +262,7 @@
     display: none;
   }
   
-   /* ================= tablet */
+   /* ================= tablet ============*/
    @media (max-width: 1024px) {
     .site-header {
         padding: 16px;
