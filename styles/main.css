@@ -1,3 +1,17 @@
 .main {
-    padding: 40px 0;
+    padding: 140px 0;
 }
+
+  /* === Tablet === */
+  @media (max-width: 768px) {
+    .main {
+        padding: 40px 0;
+    }
+  }
+  
+/* ========== Mobile =========== */
+  @media (max-width: 480px) {
+    .main {
+        padding: 40px 0;
+    }
+  }

@@ -79,6 +79,12 @@ h4 {
     line-height: 24px;
     font-weight: normal;
   }
+
+  .text-input {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+  }
   
   /* === Numbers === */
   .text-numbers {
@@ -87,13 +93,15 @@ h4 {
     font-weight: 500;
   }
   
-  /* === Adaptive H2 === */
+
+  /* === Tablet === */
   @media (max-width: 768px) {
     h2 {
       font-size: 24px;
     }
   }
   
+/* ========== Mobile =========== */
   @media (max-width: 480px) {
     h2 {
       font-size: 20px;

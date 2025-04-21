@@ -56,11 +56,6 @@
     color: var(--color-light-grey);
   }
   
-  .lang {
-
-    /* font-weight: 500; */
-  }
-  
   .phone {
     color: var(--color-light-grey);
     text-decoration: none;

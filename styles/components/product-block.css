@@ -1,0 +1,29 @@
+.product-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 48px 24px;
+    border-radius: 16px;
+    background-color: #1E1E20;
+    margin: 20px;
+}
+
+  /* === Tablet === */
+  @media (max-width: 768px) {
+    .product-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding: 48px 24px;
+        border-radius: 16px;
+        background-color: var(--color-bg);
+        margin: 20px;
+    }
+  }
+  
+/* ========== Mobile =========== */
+  @media (max-width: 480px) {
+    .product-wrapper {
+        margin: 0;
+    }
+  }

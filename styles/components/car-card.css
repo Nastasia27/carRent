@@ -1,0 +1,151 @@
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.car-card-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.car-description-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.car-description {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.price {
+    display: flex ;
+    align-items: end;
+    gap: 8px;
+}
+
+.car-info ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.car-info li {
+    display: flex;
+    gap: 8px;
+    align-content: center;
+    padding: 4px 0;
+}
+
+.car-description ul {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.car-description li {
+    position: relative;
+    padding-left: 24px;
+}
+
+.car-description li::before {
+    content: '';
+    position: absolute;
+    background-image: url(../../assets/icons/check-circle-broken.svg);
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+}
+
+.car-image-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+}
+
+.car-image {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: auto;
+  }
+  
+
+.white-elipse {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 100%);
+    backdrop-filter: blur(80px);
+    z-index: 0;
+    border-radius: 50%;
+}
+
+.dark-elipse {
+    position: absolute;
+    width: 90%;
+    height: 30%;
+    bottom: -10px;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    background: #1E1E20;
+    backdrop-filter: blur(80%);
+    z-index: 1;
+    border-radius: 50%;
+}
+
+  /* === Tablet === */
+  @media (max-width: 768px) {
+    .dark-elipse {
+        position: absolute;
+        width: 90%;
+        height: 30%;
+        bottom: -10px;
+        left: 60%;
+        transform: translate(-50%, -50%);
+        background: var(--color-bg);
+        backdrop-filter: blur(80%);
+        z-index: 1;
+        border-radius: 50%;
+    }
+
+    .white-elipse {
+        width: 90%;
+        height: 70%;
+    }
+
+    .car-image-wrapper {
+        width: 50%;
+    }
+
+  }
+  
+/* ========== Mobile =========== */
+  @media (max-width: 480px) {
+    .car-card-wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .car-image-wrapper {
+        width: 100%;
+    }
+
+    .white-elipse {
+        width: 90%;
+        height: 90%;
+    }
+  }
+
+
