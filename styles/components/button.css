@@ -5,6 +5,7 @@
     padding: 18px 24px;
     border-radius: 8px;
     gap: 8px;
+    min-width: 210px;
     cursor: pointer;
     border: none;
     opacity: 1;
@@ -43,4 +44,89 @@
     background-color: rgba(182, 136, 103, 0.2);
     border: 1px solid var(--color-primary);
     transition: var(--primary-button-transition);
+  }
+
+
+  /* additional service button */
+
+  .extra {
+
+  }
+
+  .extra.selected {
+    
+  }
+
+  .additional-service-info {
+    position: relative;
+    padding: 16px;
+    display: flex;
+    gap: 8px;
+    background-color: rgba(57, 57, 59);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .extra.selected  .additional-service-info {
+    background-color: var(--color-primary);
+  }
+
+  .additional-service-text {
+    display: flex;
+    flex-direction: column;
+    padding:0px 16px 0 16px;
+    border-left: 1px solid rgba(79, 79, 81, 1);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .extra.selected .additional-service-text {
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .service-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(79, 79, 81, 1);
+    border: none;
+    height: 100%;
+    padding: 14px;
+    color: var(--color-white);
+    content: "";
+    background-image: url(../../assets/icons/plus.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 34px;
+  }
+
+
+  .extra.selected .service-btn{
+    background-color: #C5A085;
+    background-image: url(../../assets/icons/minus-icon.svg);
+  }
+
+
+
+
+  /* ========== Mobile =========== */
+  @media (max-width: 768px) {
+
+    .additional-service-info {
+      flex-direction: column;
+      height: 100%;
+      gap: 8px;
+    }
+
+    .additional-service-text {
+      border-left: none;
+      padding: 0;
+      padding-right: 16px;
+    }
+
+    .extra.selected .additional-service-text {
+      border-left: none;
+    }
   }

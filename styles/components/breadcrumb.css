@@ -2,6 +2,9 @@
     color: rgba(145, 145, 146, 1);
     display: flex;
     align-items: start;
+    padding: 0 24px;
+    max-width: 1700px;
+    margin: 0 auto;
 }
 
 .breadcrumb-list {

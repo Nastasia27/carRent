@@ -2,16 +2,17 @@
     padding: 140px 0;
 }
 
-  /* === Tablet === */
-  @media (max-width: 768px) {
+  /* ================= tablet ============*/
+  @media (max-width: 1024px) {
     .main {
         padding: 40px 0;
     }
   }
   
-/* ========== Mobile =========== */
-  @media (max-width: 480px) {
+ /* ================== mobile ====================*/
+ @media (max-width: 768px) {
     .main {
-        padding: 40px 0;
+        padding: 0;
+        padding-top: 54px;
     }
   }

@@ -92,6 +92,14 @@ h4 {
     line-height: normal;
     font-weight: 500;
   }
+
+  .grey {
+    color: #919192;
+  }
+
+  .grey-dark {
+    color: rgba(145, 145, 146, 0.61);
+  }
   
 
   /* === Tablet === */

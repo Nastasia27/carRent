@@ -2,14 +2,14 @@
     position: relative;
     
 }
-input {
+input[type='text'], input[type='email'], input[type='tel'] {
     background-color: transparent;
     padding: 12px 14px;
     border: 1px solid #4F4F51;
     border-radius: 8px;
     outline: none;
     box-shadow: 0 1px 2px 0 rgba(16, 24, 40, 0.05);
-    max-width: 320px;
+    /* max-width: 320px; */
     min-width: 320px;
     min-height: 48px;
     color: rgba(233, 233, 233, 0.9);
@@ -45,11 +45,6 @@ input:focus-within.error {
     border: 1px solid rgba(126, 54, 48, 1);
 }
 
-input:focus-within.error .error-icon{
-    color: rgba(144, 43, 36, 1);
-    display: block;
-}
-
 .error-icon {
     position: absolute;
     top: 16px;
@@ -58,12 +53,49 @@ input:focus-within.error .error-icon{
     display: none;
 }
 
+.input-wrapper.error .error-icon{
+    color: rgba(144, 43, 36, 1);
+    display: block;
+}
+
+/* checkbox */
+.custom-checkbox {
+    position: relative;
+    cursor: pointer;
+    padding-left: 30px;
+  }
+
+  input[type='checkbox'] {
+    position: absolute;
+    opacity: 0;
+  }
+
+  .custom-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border: 1px solid rgba(208, 213, 221, 1);
+    border-radius: 6px;
+  }
+
+  .custom-checkbox input:checked + .custom-checkmark {
+    background-image: url('../../assets/icons/check-white.svg');
+    background-size: 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--color-primary);
+  }
+
+
 @media (max-width: 768px) {
     .input-wrapper {
         position: relative;
         width: 100%;
     }
-    input {
+
+    input[type='text'], input[type='email'], input[type='tel'] {
         min-width: 0;
         width: 100%;
         flex: 1;
