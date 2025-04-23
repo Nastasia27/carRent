@@ -266,7 +266,7 @@
         position: fixed;
         height: calc(100vh - 79px);
         max-width: 420px;
-        bottom: 0;
+        top: 78px;
         right: 0;
         background-color: #2D2D2F;
         display: flex;
@@ -397,8 +397,9 @@
     }
 
     .site-header .container {
+        top:54px;
         max-width: 100%;
-        height: calc(100vh - 45px);
+        height: calc(100vh - 48px);
     }
 
     .header-actions {
